@@ -1,3 +1,6 @@
+# At the moment application is not fully working. Due to lost access to the backend that was provded by the Solvd company. I will rebuild the backend on my own.
+
+
 # Shoes Shop - Solvd Final Project
 
 Online app - https://shoes-shop-t1.vercel.app/
