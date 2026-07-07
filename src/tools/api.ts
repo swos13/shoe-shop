@@ -213,14 +213,17 @@ export const getProductsNames = async (
  */
 export const getFiltersData = async () => {
   try {
-    const [genders, colors, categories, brands, sizes] = await Promise.all([
-      fetchData<ApiResponseList<BaseWithName>>('/genders'),
-      fetchData<ApiResponseList<BaseWithName>>('/colors'),
-      fetchData<ApiResponseList<BaseWithName>>('/categories'),
-      fetchData<ApiResponseList<BaseWithName>>('/brands'),
-      fetchData<ApiResponseList<BaseWithValue>>('/sizes'),
-    ]);
+    // const [genders, colors, categories, brands, sizes] = await Promise.all([
+    //   fetchData<ApiResponseList<BaseWithName>>('/genders'),
+    //   fetchData<ApiResponseList<BaseWithName>>('/colors'),
+    //   fetchData<ApiResponseList<BaseWithName>>('/categories'),
+    //   fetchData<ApiResponseList<BaseWithName>>('/brands'),
+    //   fetchData<ApiResponseList<BaseWithValue>>('/sizes'),
+    // ]);
 
+    const data = await fetch(`${process.env.API_URL}/mock-data/mock-filters.json`);
+    const { filters } = await data.json();
+    const { genders, colors, categories, brands, sizes } = filters;
     return {
       genders,
       colors,

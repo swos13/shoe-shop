@@ -1,0 +1,471 @@
+{
+  "products": [
+    {
+      
+        "id": 1788,
+        "attributes": {
+          "name": "Handball Spezial",
+          "description": "The adidas Handball Spezial shoes are sure to become your favorite casual style. Originally introduced in 1979 for indoor handball courts, these low-profile shoes will take you wherever you want to go.",
+          "price": 159.99,
+          "createdAt": "2024-10-01T11:25:49.878Z",
+          "updatedAt": "2024-10-01T11:42:45.887Z",
+          "publishedAt": "2024-10-01T11:25:49.869Z",
+          "teamName": "team-1",
+          "images": {
+            "data": [
+              {
+                "id": 1,
+                "attributes": {
+                  "name": "shoe-1-1.avif",
+                  "alternativeText": null,
+                  "caption": null,
+                  "width": null,
+                  "height": null,
+                  "formats": null,
+                  "hash": "shoe-1-1_a607a53de3",
+                  "ext": ".avif",
+                  "mime": "image/avif",
+                  "size": 33.18,
+                  "url": "shoe-1-1.avif",
+                  "previewUrl": null,
+                  "provider": "cloudinary",
+                  "createdAt": "2024-10-01T11:25:49.610Z",
+                  "updatedAt": "2024-10-01T11:25:49.610Z"
+                }
+              },
+              {
+                "id": 2,
+                "attributes": {
+                  "name": "shoe-1-2.avif",
+                  "alternativeText": null,
+                  "caption": null,
+                  "width": null,
+                  "height": null,
+                  "formats": null,
+                  "hash": "shoe-1-2_f3872a0f8f",
+                  "ext": ".avif",
+                  "mime": "image/avif",
+                  "size": 18.58,
+                  "url": "shoe-1-2.avif",
+                  "previewUrl": null,
+                  "provider": "cloudinary",
+                  "createdAt": "2024-10-01T11:25:49.596Z",
+                  "updatedAt": "2024-10-01T11:25:49.596Z"
+                }
+              },
+              {
+                "id": 3,
+                "attributes": {
+                  "name": "shoe-1-3.avif",
+                  "alternativeText": null,
+                  "caption": null,
+                  "width": null,
+                  "height": null,
+                  "formats": null,
+                  "hash": "shoe-1-3_f3872a0f8f",
+                  "ext": ".avif",
+                  "mime": "image/avif",
+                  "size": 18.58,
+                  "url": "shoe-1-3.avif",
+                  "previewUrl": null,
+                  "provider": "cloudinary",
+                  "createdAt": "2024-10-01T11:25:49.596Z",
+                  "updatedAt": "2024-10-01T11:25:49.596Z"
+                }
+              }
+            ]
+          },
+          "brand": {
+            "data": {
+              "id": 2,
+              "attributes": {
+                "name": "Adidas",
+                "createdAt": "2023-01-01T00:00:00Z",
+                "updatedAt": "2023-01-01T00:00:00Z",
+                "publishedAt": "2023-01-01T00:00:00Z"
+              }
+            }
+          },
+          "categories": {
+            "data": [
+              {
+                "id": 1,
+                "attributes": {
+                  "name": "Casual",
+                  "createdAt": "2023-01-01T00:00:00Z",
+                  "updatedAt": "2023-01-01T00:00:00Z",
+                  "publishedAt": "2023-01-01T00:00:00Z"
+                }
+              }
+            ]
+          },
+          "color": {
+            "data": {
+              "id": 3,
+              "attributes": {
+                "name": "Brown",
+                "createdAt": "2023-01-01T00:00:00Z",
+                "updatedAt": "2023-01-01T00:00:00Z",
+                "publishedAt": "2023-01-01T00:00:00Z"
+              }
+            }
+          },
+          "gender": {
+            "data": {
+              "id": 2,
+              "attributes": {
+                "name": "Male",
+                "createdAt": "2023-01-01T00:00:00Z",
+                "updatedAt": "2023-01-01T00:00:00Z",
+                "publishedAt": "2023-01-01T00:00:00Z"
+              }
+            }
+          },
+          "sizes": {
+            "data": [
+              {
+                "id": 10,
+                "attributes": {
+                  "value": 45,
+                  "createdAt": "2023-01-01T00:00:00Z",
+                  "updatedAt": "2023-01-01T00:00:00Z",
+                  "publishedAt": "2023-01-01T00:00:00Z"
+                }
+              },
+              {
+                "id": 11,
+                "attributes": {
+                  "value": 46,
+                  "createdAt": "2023-01-01T00:00:00Z",
+                  "updatedAt": "2023-01-01T00:00:00Z",
+                  "publishedAt": "2023-01-01T00:00:00Z"
+                }
+              }
+            ]
+          }
+        },
+      
+      "meta": {}
+    },
+    {
+      
+        "id": 1789,
+        "attributes": {
+          "name": "Nike Street Runner Black",
+          "description": "Everyday Nike sneakers built for comfort, grip, and all-day city wear.",
+          "price": 129.99,
+          "createdAt": "2024-11-01T10:00:00.000Z",
+          "updatedAt": "2024-11-01T10:00:00.000Z",
+          "publishedAt": "2024-11-01T10:00:00.000Z",
+          "teamName": "team-1",
+          "images": {
+            "data": [
+              {
+                "id": 4,
+                "attributes": {
+                  "name": "shoe-2.avif",
+                  "alternativeText": "Nike black shoe",
+                  "caption": null,
+                  "width": null,
+                  "height": null,
+                  "formats": null,
+                  "hash": "shoe-2",
+                  "ext": ".avif",
+                  "mime": "image/avif",
+                  "size": 250,
+                  "url": "shoe-2.avif",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "createdAt": "2024-11-01T10:00:00.000Z",
+                  "updatedAt": "2024-11-01T10:00:00.000Z"
+                }
+              }
+            ]
+          },
+          "brand": {
+            "data": {
+              "id": 1,
+              "attributes": {
+                "name": "Nike",
+                "createdAt": "2023-01-01T00:00:00Z",
+                "updatedAt": "2023-01-01T00:00:00Z",
+                "publishedAt": "2023-01-01T00:00:00Z"
+              }
+            }
+          },
+          "categories": {
+            "data": [
+              {
+                "id": 2,
+                "attributes": {
+                  "name": "Running",
+                  "createdAt": "2023-01-01T00:00:00Z",
+                  "updatedAt": "2023-01-01T00:00:00Z",
+                  "publishedAt": "2023-01-01T00:00:00Z"
+                }
+              }
+            ]
+          },
+          "color": {
+            "data": {
+              "id": 6,
+              "attributes": {
+                "name": "Black",
+                "createdAt": "2023-01-01T00:00:00Z",
+                "updatedAt": "2023-01-01T00:00:00Z",
+                "publishedAt": "2023-01-01T00:00:00Z"
+              }
+            }
+          },
+          "gender": {
+            "data": {
+              "id": 1,
+              "attributes": {
+                "name": "Unisex",
+                "createdAt": "2023-01-01T00:00:00Z",
+                "updatedAt": "2023-01-01T00:00:00Z",
+                "publishedAt": "2023-01-01T00:00:00Z"
+              }
+            }
+          },
+          "sizes": {
+            "data": [
+              { "id": 4, "attributes": { "value": 39, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+              { "id": 5, "attributes": { "value": 40, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+              { "id": 6, "attributes": { "value": 41, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+              { "id": 8, "attributes": { "value": 43, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
+            ]
+          }
+        },
+      
+      "meta": {}
+    },
+    {
+      
+        "id": 1790,
+        "attributes": {
+          "name": "Nike Trail Pulse Green",
+          "description": "Lightweight Nike trail shoes designed for long comfort and responsive movement.",
+          "price": 189.5,
+          "createdAt": "2024-11-01T10:00:00.000Z",
+          "updatedAt": "2024-11-01T10:00:00.000Z",
+          "publishedAt": "2024-11-01T10:00:00.000Z",
+          "teamName": "team-1",
+          "images": {
+            "data": [
+              {
+                "id": 5,
+                "attributes": {
+                  "name": "shoe-3.avif",
+                  "alternativeText": "Nike green shoe",
+                  "caption": null,
+                  "width": null,
+                  "height": null,
+                  "formats": null,
+                  "hash": "shoe-3",
+                  "ext": ".avif",
+                  "mime": "image/avif",
+                  "size": 248,
+                  "url": "shoe-3.avif",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "createdAt": "2024-11-01T10:00:00.000Z",
+                  "updatedAt": "2024-11-01T10:00:00.000Z"
+                }
+              }
+            ]
+          },
+          "brand": { "data": { "id": 1, "attributes": { "name": "Nike", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "categories": { "data": [ { "id": 3, "attributes": { "name": "Sports", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } ] },
+          "color": { "data": { "id": 4, "attributes": { "name": "Green", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "gender": { "data": { "id": 1, "attributes": { "name": "Unisex", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "sizes": { "data": [
+            { "id": 2, "attributes": { "value": 37, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 3, "attributes": { "value": 38, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 5, "attributes": { "value": 40, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 7, "attributes": { "value": 42, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
+          ] }
+        },
+      
+      "meta": {}
+    },
+    {
+      
+        "id": 1791,
+        "attributes": {
+          "name": "Nike Court Flex White",
+          "description": "Clean white Nike style with cushioned support for daily walks and casual outfits.",
+          "price": 219.0,
+          "createdAt": "2024-11-01T10:00:00.000Z",
+          "updatedAt": "2024-11-01T10:00:00.000Z",
+          "publishedAt": "2024-11-01T10:00:00.000Z",
+          "teamName": "team-1",
+          "images": {
+            "data": [
+              {
+                "id": 6,
+                "attributes": {
+                  "name": "shoe-4.avif",
+                  "alternativeText": "Nike white shoe",
+                  "caption": null,
+                  "width": null,
+                  "height": null,
+                  "formats": null,
+                  "hash": "shoe-4",
+                  "ext": ".avif",
+                  "mime": "image/avif",
+                  "size": 244,
+                  "url": "shoe-4.avif",
+                  "previewUrl": null,
+                  "provider": "local",
+                  "createdAt": "2024-11-01T10:00:00.000Z",
+                  "updatedAt": "2024-11-01T10:00:00.000Z"
+                }
+              }
+            ]
+          },
+          "brand": { "data": { "id": 1, "attributes": { "name": "Nike", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "categories": { "data": [ { "id": 1, "attributes": { "name": "Casual", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } ] },
+          "color": { "data": { "id": 7, "attributes": { "name": "White", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "gender": { "data": { "id": 3, "attributes": { "name": "Female", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "sizes": { "data": [
+            { "id": 1, "attributes": { "value": 36, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 2, "attributes": { "value": 37, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 3, "attributes": { "value": 38, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 4, "attributes": { "value": 39, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
+          ] }
+        },
+      
+      "meta": {}
+    },
+    {
+      
+        "id": 1792,
+        "attributes": {
+          "name": "Nike Motion Blend",
+          "description": "A colorful Nike pair made for statement style and comfortable daily use.",
+          "price": 249.99,
+          "createdAt": "2024-11-01T10:00:00.000Z",
+          "updatedAt": "2024-11-01T10:00:00.000Z",
+          "publishedAt": "2024-11-01T10:00:00.000Z",
+          "teamName": "team-1",
+          "images": { "data": [ { "id": 7, "attributes": { "name": "shoe-5.avif", "alternativeText": "Nike multicolor shoe", "caption": null, "width": null, "height": null, "formats": null, "hash": "shoe-5", "ext": ".avif", "mime": "image/avif", "size": 260, "url": "shoe-5.avif", "previewUrl": null, "provider": "local", "createdAt": "2024-11-01T10:00:00.000Z", "updatedAt": "2024-11-01T10:00:00.000Z" } } ] },
+          "brand": { "data": { "id": 1, "attributes": { "name": "Nike", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "categories": { "data": [ { "id": 3, "attributes": { "name": "Sports", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } ] },
+          "color": { "data": { "id": 1, "attributes": { "name": "Multicolor", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "gender": { "data": { "id": 1, "attributes": { "name": "Unisex", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "sizes": { "data": [
+            { "id": 3, "attributes": { "value": 38, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 4, "attributes": { "value": 39, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 6, "attributes": { "value": 41, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 9, "attributes": { "value": 44, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
+          ] }
+        },
+      
+      "meta": {}
+    },
+    {
+      
+        "id": 1793,
+        "attributes": {
+          "name": "Nike Air Daily White",
+          "description": "Simple all-white Nike sneakers with breathable upper and soft cushioning.",
+          "price": 124.75,
+          "createdAt": "2024-11-01T10:00:00.000Z",
+          "updatedAt": "2024-11-01T10:00:00.000Z",
+          "publishedAt": "2024-11-01T10:00:00.000Z",
+          "teamName": "team-1",
+          "images": { "data": [ { "id": 8, "attributes": { "name": "shoe-6.avif", "alternativeText": "Nike white shoe", "caption": null, "width": null, "height": null, "formats": null, "hash": "shoe-6", "ext": ".avif", "mime": "image/avif", "size": 241, "url": "shoe-6.avif", "previewUrl": null, "provider": "local", "createdAt": "2024-11-01T10:00:00.000Z", "updatedAt": "2024-11-01T10:00:00.000Z" } } ] },
+          "brand": { "data": { "id": 1, "attributes": { "name": "Nike", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "categories": { "data": [ { "id": 1, "attributes": { "name": "Casual", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } ] },
+          "color": { "data": { "id": 7, "attributes": { "name": "White", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "gender": { "data": { "id": 2, "attributes": { "name": "Male", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "sizes": { "data": [
+            { "id": 5, "attributes": { "value": 40, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 6, "attributes": { "value": 41, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 7, "attributes": { "value": 42, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
+          ] }
+        },
+      
+      "meta": {}
+    },
+    {
+      
+        "id": 1794,
+        "attributes": {
+          "name": "Nike Velocity Orange",
+          "description": "Energetic orange Nike running silhouette with durable outsole and stable ride.",
+          "price": 134.2,
+          "createdAt": "2024-11-01T10:00:00.000Z",
+          "updatedAt": "2024-11-01T10:00:00.000Z",
+          "publishedAt": "2024-11-01T10:00:00.000Z",
+          "teamName": "team-1",
+          "images": { "data": [ { "id": 9, "attributes": { "name": "shoe-7.avif", "alternativeText": "Nike orange shoe", "caption": null, "width": null, "height": null, "formats": null, "hash": "shoe-7", "ext": ".avif", "mime": "image/avif", "size": 252, "url": "shoe-7.avif", "previewUrl": null, "provider": "local", "createdAt": "2024-11-01T10:00:00.000Z", "updatedAt": "2024-11-01T10:00:00.000Z" } } ] },
+          "brand": { "data": { "id": 1, "attributes": { "name": "Nike", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "categories": { "data": [ { "id": 2, "attributes": { "name": "Running", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } ] },
+          "color": { "data": { "id": 9, "attributes": { "name": "Orange", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "gender": { "data": { "id": 1, "attributes": { "name": "Unisex", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "sizes": { "data": [
+            { "id": 6, "attributes": { "value": 41, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 7, "attributes": { "value": 42, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 8, "attributes": { "value": 43, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 9, "attributes": { "value": 44, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
+          ] }
+        },
+      
+      "meta": {}
+    },
+    {
+      
+        "id": 1795,
+        "attributes": {
+          "name": "Puma Heritage Brown",
+          "description": "Classic Puma look with rich brown tones, made for daily wear and comfort.",
+          "price": 114.99,
+          "createdAt": "2024-11-01T10:00:00.000Z",
+          "updatedAt": "2024-11-01T10:00:00.000Z",
+          "publishedAt": "2024-11-01T10:00:00.000Z",
+          "teamName": "team-1",
+          "images": { "data": [ { "id": 10, "attributes": { "name": "shoe-8.avif", "alternativeText": "Puma brown shoe", "caption": null, "width": null, "height": null, "formats": null, "hash": "shoe-8", "ext": ".avif", "mime": "image/avif", "size": 239, "url": "shoe-8.avif", "previewUrl": null, "provider": "local", "createdAt": "2024-11-01T10:00:00.000Z", "updatedAt": "2024-11-01T10:00:00.000Z" } } ] },
+          "brand": { "data": { "id": 3, "attributes": { "name": "Puma", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "categories": { "data": [ { "id": 1, "attributes": { "name": "Casual", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } ] },
+          "color": { "data": { "id": 3, "attributes": { "name": "Brown", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "gender": { "data": { "id": 1, "attributes": { "name": "Unisex", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "sizes": { "data": [
+            { "id": 2, "attributes": { "value": 37, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 3, "attributes": { "value": 38, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 4, "attributes": { "value": 39, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 6, "attributes": { "value": 41, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
+          ] }
+        },
+      
+      "meta": {}
+    },
+    {
+      
+        "id": 1796,
+        "attributes": {
+          "name": "Nike Sprint Red",
+          "description": "Fast and bold Nike red sneaker with stable support and breathable design.",
+          "price": 144.99,
+          "createdAt": "2024-11-01T10:00:00.000Z",
+          "updatedAt": "2024-11-01T10:00:00.000Z",
+          "publishedAt": "2024-11-01T10:00:00.000Z",
+          "teamName": "team-1",
+          "images": { "data": [ { "id": 11, "attributes": { "name": "shoe-9.avif", "alternativeText": "Nike red shoe", "caption": null, "width": null, "height": null, "formats": null, "hash": "shoe-9", "ext": ".avif", "mime": "image/avif", "size": 255, "url": "shoe-9.avif", "previewUrl": null, "provider": "local", "createdAt": "2024-11-01T10:00:00.000Z", "updatedAt": "2024-11-01T10:00:00.000Z" } } ] },
+          "brand": { "data": { "id": 1, "attributes": { "name": "Nike", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "categories": { "data": [ { "id": 2, "attributes": { "name": "Running", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } ] },
+          "color": { "data": { "id": 8, "attributes": { "name": "Red", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "gender": { "data": { "id": 1, "attributes": { "name": "Unisex", "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } } },
+          "sizes": { "data": [
+            { "id": 7, "attributes": { "value": 42, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 8, "attributes": { "value": 43, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 9, "attributes": { "value": 44, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
+            { "id": 10, "attributes": { "value": 45, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
+          ] }
+        },
+      
+      "meta": {}
+    }
+  ]
+}

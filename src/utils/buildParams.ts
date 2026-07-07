@@ -26,7 +26,7 @@ export default function buildParams(
   additionalParams: Record<string, string | number> = {},
 ): Record<string, string | number> {
   const params: typeof additionalParams = {};
-
+  console.log("Am i here? Query:", query, "Additional params:", additionalParams);
   // Helper function to handle both query and object input
   const getAllValues = (key: string): string[] => {
     if (query instanceof URLSearchParams) {
@@ -80,6 +80,6 @@ export default function buildParams(
   params['filters[name][$containsi]'] = searchString || '';
   params['filters[price][$gte]'] = minPrice;
   params['filters[price][$lte]'] = maxPrice;
-
+  console.log("return values", Object.assign(params, additionalParams));
   return Object.assign(params, additionalParams);
 }

@@ -20,6 +20,7 @@ import {
   getStored,
   getOrders,
 } from './api';
+import { getMockProducts } from './mockApi';
 
 /**
  * Custom hook to fetch paginated products using infinite scrolling.
@@ -39,7 +40,7 @@ export const useProducts = (
   return useInfiniteQuery({
     queryKey: ['products', JSON.stringify(params) + myProducts],
     queryFn: ({ pageParam }) =>
-      user ? getMyProducts(user, pageParam) : getProducts(pageParam, params),
+      user ? getMyProducts(user, pageParam) : getMockProducts(pageParam),
     getNextPageParam: lastPage => {
       if (!lastPage) return undefined;
       const hasNextPage =
@@ -49,10 +50,9 @@ export const useProducts = (
     },
     select: data => data.pages.flatMap(page => page.data),
     initialPageParam: 1,
-    placeholderData: (_, prevQuery) => {
-      if (prevQuery || !initialProducts) return;
-      return { pages: [initialProducts], pageParams: [1] };
-    },
+    placeholderData: initialProducts
+      ? { pages: [initialProducts], pageParams: [1] }
+      : undefined,
     staleTime: 0,
   });
 };
