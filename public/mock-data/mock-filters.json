@@ -1,6 +1,6 @@
 {
   "filters": {
-    "genders" : [
+    "genders" : { "data": [
         {
           "id": 1,
           "attributes": {
@@ -31,8 +31,8 @@
             "publishedAt": "2023-01-01T00:00:00Z"
           }
         }
-    ],
-    "colors" : [
+    ]},
+    "colors" : {"data": [
         {
           "id": 1,
           "attributes": {
@@ -143,8 +143,10 @@
             "publishedAt": "2023-01-01T00:00:00Z"
           }
         }
-      ],
-    "brands" : [
+      ]
+      },
+      "brands" : {
+      "data": [
         {
           "id": 1,
           "attributes": {
@@ -185,8 +187,8 @@
             "publishedAt": "2023-01-01T00:00:00Z"
           }
         }
-      ],
-    "categories" : [
+      ]},
+    "categories" : {"data": [
         {
           "id": 1,
           "attributes": {
@@ -217,8 +219,8 @@
             "publishedAt": "2023-01-01T00:00:00Z"
           }
         }
-      ],
-    "sizes": [
+      ]},
+    "sizes": {"data": [
       {
           "id": 1,
           "attributes": {
@@ -359,6 +361,6 @@
             "publishedAt": "2023-01-01T00:00:00Z"
           }
         }
-    ]
+    ]}
 }}
 

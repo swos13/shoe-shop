@@ -31,7 +31,7 @@ export const FilterSidebar = ({
   const router = useRouter();
   const pathName = usePathname();
   const searchParams = useSearchParams();
-
+  
   const { genders, colors, brands, categories, sizes } = filtersData;
 
   const handleClearFilters = () => {
@@ -49,6 +49,7 @@ export const FilterSidebar = ({
     { name: 'Categories', options: categories },
     { name: 'Sizes', options: sizes },
   ];
+  // console.log("Categories data:", categoryData)
 
   const Content = () => {
     return (

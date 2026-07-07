@@ -2,7 +2,7 @@
 
 export async function getMockProducts(pageParam: number = 1, params: Object = {}) {
 
-    const response = await fetch(`${process.env.API_URL}/mock-data/mock-products.json`);
+    const response = await fetch(`${process.env.API_URL}/mock-data/mock-products.json`, { cache: 'no-store' });
 
     if (!response.ok) throw Error("Failed to fetch products");
 

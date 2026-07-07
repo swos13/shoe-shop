@@ -221,8 +221,9 @@ export const getFiltersData = async () => {
     //   fetchData<ApiResponseList<BaseWithValue>>('/sizes'),
     // ]);
 
-    const data = await fetch(`${process.env.API_URL}/mock-data/mock-filters.json`);
+    const data = await fetch(`${process.env.API_URL}/mock-data/mock-filters.json`, { cache: 'no-store' });
     const { filters } = await data.json();
+    console.log("reponse data:", filters.genders)
     const { genders, colors, categories, brands, sizes } = filters;
     return {
       genders,
