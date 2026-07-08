@@ -139,7 +139,7 @@ const ProductForm = ({
 
     if (categories?.data) {
       const oldCategoryIds = categories.data.map(cat => cat.id);
-      const newCategoryValues = filtersData.categories.data.map(elem =>
+      const newCategoryValues = filtersData.categories.data.map((elem: any) =>
         oldCategoryIds.includes(elem.id) ? elem.id : 0,
       );
       setValue('categories', newCategoryValues);
@@ -147,7 +147,7 @@ const ProductForm = ({
 
     if (sizes?.data) {
       const oldSizeIds = sizes.data.map(size => size.id);
-      const newSizeValues = filtersData.sizes.data.map(size =>
+      const newSizeValues = filtersData.sizes.data.map((size: any) =>
         oldSizeIds.includes(size.id) ? size.id : 0,
       );
       setValue('sizes', newSizeValues);
@@ -236,10 +236,10 @@ const ProductForm = ({
   useEffect(() => {
     if (filtersData) {
       resetField('sizes', {
-        defaultValue: filtersData.sizes.data.map(_ => 0),
+        defaultValue: filtersData.sizes.data.map((_: any) => 0),
       });
       resetField('categories', {
-        defaultValue: filtersData.categories.data.map(_ => 0),
+        defaultValue: filtersData.categories.data.map((_: any) => 0),
       });
       if (product && mode === 'edit') {
         setProductValues();
@@ -260,17 +260,17 @@ const ProductForm = ({
     }
   }, []);
 
-  const colorOptions = filtersData?.colors.data.map(elem => ({
+  const colorOptions = filtersData?.colors.data.map((elem: any) => ({
     name: elem.attributes.name,
     value: elem.id,
   }));
 
-  const genderOptions = filtersData?.genders.data.map(elem => ({
+  const genderOptions = filtersData?.genders.data.map((elem: any) => ({
     name: elem.attributes.name,
     value: elem.id,
   }));
 
-  const brandOptions = filtersData?.brands.data.map(elem => ({
+  const brandOptions = filtersData?.brands.data.map((elem: any) => ({
     name: elem.attributes.name,
     value: elem.id,
   }));
