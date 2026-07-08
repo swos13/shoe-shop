@@ -50,6 +50,7 @@ const nunitoSans = Nunito_Sans({
   display: 'swap',
   subsets: ['latin'],
   fallback: ['system-ui', 'arial'],
+  adjustFontFallback: false,
 });
 
 let theme = createTheme();
