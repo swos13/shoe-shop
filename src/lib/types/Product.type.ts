@@ -91,3 +91,11 @@ export interface OrderResponseBody {
   has_more: boolean;
   next_page: string;
 }
+
+export interface MockFilters {
+  genders: Array<string>;
+  categories: Array<string>;
+  brands: Array<string>;
+  colors: Array<string>;
+  sizes: Array<string>;
+}

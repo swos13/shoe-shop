@@ -1,4 +1,4 @@
-import { IImage, TMyImage } from "@/lib/types";
+import { Data, IImage, MockFilters, ProductAttributes, TMyImage } from "@/lib/types";
 
 export const capitalizeFirstLetter = (text: string) => {
   return text
@@ -51,3 +51,23 @@ export const getItemUrl = (item: IImage | TMyImage): string => {
 
   return 'https://lightwidget.com/wp-content/uploads/localhost-file-not-found.jpg';
 };
+
+export const filterProducts = (products: Data<ProductAttributes>[], filters: MockFilters) => {
+  
+  const filteredProducts = products.filter(product => {
+    const { genders, categories, colors, sizes, brands } = filters;
+    if (genders.includes(`${product.attributes.gender?.data?.attributes.name}`)) return true;
+    if (colors.includes(`${product.attributes.color?.data?.attributes.name}`)) return true;
+    if (brands.includes(`${product.attributes.brand?.data?.attributes.name}`)) return true;
+
+    const productCategories = product.attributes.categories?.data;
+    if (productCategories && productCategories.some(category => categories.includes(category.attributes.name))) return true;
+
+    const productSizes = product.attributes.sizes?.data;
+    if (productSizes && productSizes.some(size => sizes.includes(`${size.attributes.value}`))) return true;
+
+    return false;
+  })
+
+  return filteredProducts;
+}

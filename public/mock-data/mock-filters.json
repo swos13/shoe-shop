@@ -1,0 +1,366 @@
+{
+  "filters": {
+    "genders" : { "data": [
+        {
+          "id": 1,
+          "attributes": {
+            "id": 1,
+            "name": "Unisex",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 2,
+          "attributes": {
+            "id": 2,
+            "name": "Male",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 3,
+          "attributes": {
+            "id": 3,
+            "name": "Female",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        }
+    ]},
+    "colors" : {"data": [
+        {
+          "id": 1,
+          "attributes": {
+            "id": 1,
+            "name": "Multicolor",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 2,
+          "attributes": {
+            "id": 2,
+            "name": "Blue",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 3,
+          "attributes": {
+            "id": 3,
+            "name": "Brown",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 4,
+          "attributes": {
+            "id": 4,
+            "name": "Green",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 5,
+          "attributes": {
+            "id": 5,
+            "name": "Gray",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 6,
+          "attributes": {
+            "id": 6,
+            "name": "Black",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 7,
+          "attributes": {
+            "id": 7,
+            "name": "White",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 8,
+          "attributes": {
+            "id": 8,
+            "name": "Red",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 9,
+          "attributes": {
+            "id": 9,
+            "name": "Orange",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 10,
+          "attributes": {
+            "id": 10,
+            "name": "Yellow",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 11,
+          "attributes": {
+            "id": 11,
+            "name": "Purple",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        }
+      ]
+      },
+      "brands" : {
+      "data": [
+        {
+          "id": 1,
+          "attributes": {
+            "id": 1,
+            "name": "Nike",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 2,
+          "attributes": {
+            "id": 2,
+            "name": "Adidas",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 3,
+          "attributes": {
+            "id": 3,
+            "name": "Puma",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 4,
+          "attributes": {
+            "id": 4,
+            "name": "Reebok",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        }
+      ]},
+    "categories" : {"data": [
+        {
+          "id": 1,
+          "attributes": {
+            "id": 1,
+            "name": "Casual",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 2,
+          "attributes": {
+            "id": 2,
+            "name": "Running",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 3,
+          "attributes": {
+            "id": 3,
+            "name": "Sports",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        }
+      ]},
+    "sizes": {"data": [
+      {
+          "id": 1,
+          "attributes": {
+            "id": 1,
+            "value": "36",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 2,
+          "attributes": {
+            "id": 2,
+            "value": "37",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 3,
+          "attributes": {
+            "id": 3,
+            "value": "38",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 4,
+          "attributes": {
+            "id": 4,
+            "value": "39",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 5,
+          "attributes": {
+            "id": 5,
+            "value": "40",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 6,
+          "attributes": {
+            "id": 6,
+            "value": "41",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 7,
+          "attributes": {
+            "id": 7,
+            "value": "42",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 8,
+          "attributes": {
+            "id": 8,
+            "value": "43",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 9,
+          "attributes": {
+            "id": 9,
+            "value": "44",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 10,
+          "attributes": {
+            "id": 10,
+            "value": "45",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 11,
+          "attributes": {
+            "id": 11,
+            "value": "46",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 12,
+          "attributes": {
+            "id": 12,
+            "value": "33",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 13,
+          "attributes": {
+            "id": 13,
+            "value": "34",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        },
+        {
+          "id": 14,
+          "attributes": {
+            "id": 14,
+            "value": "35",
+            "createdAt": "2023-01-01T00:00:00Z",
+            "updatedAt": "2023-01-01T00:00:00Z",
+            "publishedAt": "2023-01-01T00:00:00Z"
+          }
+        }
+    ]}
+}}
+

@@ -9,6 +9,7 @@ import {
   ProductsResponse,
   OrderResponseBody,
   TSelectedSize,
+  MockFilters,
 } from '@/lib/types';
 import { queryClient } from '.';
 import {
@@ -20,6 +21,7 @@ import {
   getStored,
   getOrders,
 } from './api';
+import { getMockProducts } from './mockApi';
 
 /**
  * Custom hook to fetch paginated products using infinite scrolling.
@@ -32,14 +34,16 @@ import {
  */
 export const useProducts = (
   initialProducts?: ProductsResponse,
-  params?: {},
+  params?: MockFilters | Object,
   user?: User,
 ) => {
   const myProducts = user ? 'my-products' : '';
   return useInfiniteQuery({
     queryKey: ['products', JSON.stringify(params) + myProducts],
-    queryFn: ({ pageParam }) =>
-      user ? getMyProducts(user, pageParam) : getProducts(pageParam, params),
+    queryFn: async ({ pageParam }) => {
+      const result = user ? await getMyProducts(user, pageParam) : await getMockProducts(pageParam, params as MockFilters);
+      return result as ProductsResponse;
+    },
     getNextPageParam: lastPage => {
       if (!lastPage) return undefined;
       const hasNextPage =
@@ -49,10 +53,9 @@ export const useProducts = (
     },
     select: data => data.pages.flatMap(page => page.data),
     initialPageParam: 1,
-    placeholderData: (_, prevQuery) => {
-      if (prevQuery || !initialProducts) return;
-      return { pages: [initialProducts], pageParams: [1] };
-    },
+    placeholderData: initialProducts
+      ? { pages: [initialProducts], pageParams: [1] }
+      : undefined,
     staleTime: 0,
   });
 };

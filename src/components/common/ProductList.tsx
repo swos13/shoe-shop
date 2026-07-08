@@ -34,7 +34,6 @@ const ProductList = ({ fullWidth, initialProducts, user }: Props) => {
   const bottomElementRef = useRef<HTMLDivElement>(null);
 
   useIntersectionObserver(hasNextPage, fetchNextPage, bottomElementRef);
-
   return (
     <Grid
       container
@@ -45,7 +44,7 @@ const ProductList = ({ fullWidth, initialProducts, user }: Props) => {
       {isLoading &&
         new Array(8).fill(0).map((_, index) => (
           <Grid
-            key={index}
+            key={'skeleton_' + index}
             item
             xs={6}
             md={isFullWidth ? 4 : 6}
@@ -80,7 +79,7 @@ const ProductList = ({ fullWidth, initialProducts, user }: Props) => {
       {products &&
         products.map((product, index) => (
           <Grid
-            key={product.id}
+            key={'product_' + product.id}
             item
             xs={6}
             md={isFullWidth ? 4 : 6}
