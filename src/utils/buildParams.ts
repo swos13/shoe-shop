@@ -21,12 +21,21 @@ import { ReadonlyURLSearchParams } from 'next/navigation';
  * //   "sort": "price:asc"
  * // }
  */
+
+
+type MockParamsType = {
+  genders: Array<string>;
+  categories: Array<string>;
+  brands: Array<string>;
+  colors: Array<string>;
+  sizes: Array<string>;
+}
+
 export default function buildParams(
   query: ReadonlyURLSearchParams | URLSearchParams, // Allow both types
   additionalParams: Record<string, string | number> = {},
 ): Record<string, string | number> {
-  const params: typeof additionalParams = {};
-  console.log("Am i here? Query:", query, "Additional params:", additionalParams);
+  const params: MockParamsType = { genders: [], categories: [], brands: [], colors: [], sizes: [] };
   // Helper function to handle both query and object input
   const getAllValues = (key: string): string[] => {
     if (query instanceof URLSearchParams) {
@@ -57,29 +66,39 @@ export default function buildParams(
   const minPrice = getValue('minPrice') || 0;
   const maxPrice = getValue('maxPrice') || Infinity;
 
-  genders.forEach((value, index) => {
-    params[`filters[gender][name][${index}]`] = value;
-  });
 
-  brands.forEach((value, index) => {
-    params[`filters[brand][name][${index}]`] = value;
-  });
 
-  colors.forEach((value, index) => {
-    params[`filters[color][name][${index}]`] = value;
-  });
+  // genders.forEach((value, index) => {
+  //   params[`filters[gender][name][${index}]`] = value;
+  // });
 
-  categories.forEach((value, index) => {
-    params[`filters[categories][name][${index}]`] = value;
-  });
+  // brands.forEach((value, index) => {
+  //   params[`filters[brand][name][${index}]`] = value;
+  // });
 
-  sizes.forEach((value, index) => {
-    params[`filters[sizes][value][${index}]`] = value;
-  });
+  // colors.forEach((value, index) => {
+  //   params[`filters[color][name][${index}]`] = value;
+  // });
 
-  params['filters[name][$containsi]'] = searchString || '';
-  params['filters[price][$gte]'] = minPrice;
-  params['filters[price][$lte]'] = maxPrice;
-  console.log("return values", Object.assign(params, additionalParams));
+  // categories.forEach((value, index) => {
+  //   params[`filters[categories][name][${index}]`] = value;
+  // });
+
+  // sizes.forEach((value, index) => {
+  //   params[`filters[sizes][value][${index}]`] = value;
+  // });
+
+  // params['filters[name][$containsi]'] = searchString || '';
+  // params['filters[price][$gte]'] = minPrice;
+  // params['filters[price][$lte]'] = maxPrice;
+
+  //MOCK API FILTERING
+
+  params.genders = genders;
+  params.brands = brands;
+  params.colors = colors;
+  params.categories = categories;
+  params.sizes = sizes;
+
   return Object.assign(params, additionalParams);
 }

@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      
+      "data": {
         "id": 1788,
         "attributes": {
           "name": "Handball Spezial",
@@ -143,12 +143,12 @@
               }
             ]
           }
-        },
-      
+        }
+      },
       "meta": {}
     },
     {
-      
+      "data": {
         "id": 1789,
         "attributes": {
           "name": "Nike Street Runner Black",
@@ -236,12 +236,12 @@
               { "id": 8, "attributes": { "value": 43, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
             ]
           }
-        },
-      
+        }
+      },
       "meta": {}
     },
     {
-      
+      "data": {
         "id": 1790,
         "attributes": {
           "name": "Nike Trail Pulse Green",
@@ -285,12 +285,12 @@
             { "id": 5, "attributes": { "value": 40, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
             { "id": 7, "attributes": { "value": 42, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
           ] }
-        },
-      
+        }
+      },
       "meta": {}
     },
     {
-      
+      "data": {
         "id": 1791,
         "attributes": {
           "name": "Nike Court Flex White",
@@ -334,12 +334,12 @@
             { "id": 3, "attributes": { "value": 38, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
             { "id": 4, "attributes": { "value": 39, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
           ] }
-        },
-      
+        }
+      },
       "meta": {}
     },
     {
-      
+      "data": {
         "id": 1792,
         "attributes": {
           "name": "Nike Motion Blend",
@@ -360,12 +360,12 @@
             { "id": 6, "attributes": { "value": 41, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
             { "id": 9, "attributes": { "value": 44, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
           ] }
-        },
-      
+        }
+      },
       "meta": {}
     },
     {
-      
+      "data": {
         "id": 1793,
         "attributes": {
           "name": "Nike Air Daily White",
@@ -385,12 +385,12 @@
             { "id": 6, "attributes": { "value": 41, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
             { "id": 7, "attributes": { "value": 42, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
           ] }
-        },
-      
+        }
+      },
       "meta": {}
     },
     {
-      
+      "data": {
         "id": 1794,
         "attributes": {
           "name": "Nike Velocity Orange",
@@ -411,12 +411,12 @@
             { "id": 8, "attributes": { "value": 43, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
             { "id": 9, "attributes": { "value": 44, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
           ] }
-        },
-      
+        }
+      },
       "meta": {}
     },
     {
-      
+      "data": {
         "id": 1795,
         "attributes": {
           "name": "Puma Heritage Brown",
@@ -437,12 +437,12 @@
             { "id": 4, "attributes": { "value": 39, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
             { "id": 6, "attributes": { "value": 41, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
           ] }
-        },
-      
+        }
+      },
       "meta": {}
     },
     {
-      
+      "data": {
         "id": 1796,
         "attributes": {
           "name": "Nike Sprint Red",
@@ -463,8 +463,8 @@
             { "id": 9, "attributes": { "value": 44, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } },
             { "id": 10, "attributes": { "value": 45, "createdAt": "2023-01-01T00:00:00Z", "updatedAt": "2023-01-01T00:00:00Z", "publishedAt": "2023-01-01T00:00:00Z" } }
           ] }
-        },
-      
+        }
+      },
       "meta": {}
     }
   ]

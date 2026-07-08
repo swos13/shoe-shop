@@ -34,7 +34,6 @@ const ProductList = ({ fullWidth, initialProducts, user }: Props) => {
   const bottomElementRef = useRef<HTMLDivElement>(null);
 
   useIntersectionObserver(hasNextPage, fetchNextPage, bottomElementRef);
-  console.log('products list', products);
   return (
     <Grid
       container

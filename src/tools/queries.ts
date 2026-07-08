@@ -9,6 +9,7 @@ import {
   ProductsResponse,
   OrderResponseBody,
   TSelectedSize,
+  MockFilters,
 } from '@/lib/types';
 import { queryClient } from '.';
 import {
@@ -33,14 +34,16 @@ import { getMockProducts } from './mockApi';
  */
 export const useProducts = (
   initialProducts?: ProductsResponse,
-  params?: {},
+  params?: MockFilters | Object,
   user?: User,
 ) => {
   const myProducts = user ? 'my-products' : '';
   return useInfiniteQuery({
     queryKey: ['products', JSON.stringify(params) + myProducts],
-    queryFn: ({ pageParam }) =>
-      user ? getMyProducts(user, pageParam) : getMockProducts(pageParam),
+    queryFn: async ({ pageParam }) => {
+      const result = user ? await getMyProducts(user, pageParam) : await getMockProducts(pageParam, params as MockFilters);
+      return result as ProductsResponse;
+    },
     getNextPageParam: lastPage => {
       if (!lastPage) return undefined;
       const hasNextPage =
