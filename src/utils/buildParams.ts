@@ -1,3 +1,4 @@
+import { MockFilters } from '@/lib/types';
 import { ReadonlyURLSearchParams } from 'next/navigation';
 
 /**
@@ -34,7 +35,7 @@ type MockParamsType = {
 export default function buildParams(
   query: ReadonlyURLSearchParams | URLSearchParams, // Allow both types
   additionalParams: Record<string, string | number> = {},
-): Record<string, string | number> {
+): MockFilters {
   const params: MockParamsType = { genders: [], categories: [], brands: [], colors: [], sizes: [] };
   // Helper function to handle both query and object input
   const getAllValues = (key: string): string[] => {
