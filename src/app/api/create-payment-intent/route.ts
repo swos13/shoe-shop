@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
+//TODO: Add check if production and if it is then throw error
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
+  apiVersion: '2024-09-30.acacia', // Use your targeted API version
+});
 
 export async function POST(req: NextRequest) {
   try {
