@@ -66,14 +66,7 @@ export async function getMockProducts(
 }
 
 export async function getMockMaxPrice() {
-  const response = await fetch(
-    `${process.env.API_URL}/mock-data/mock-products.json`,
-  );
-  if (!response.ok) throw Error('Failed to fetch products');
-
-  const { products } = (await response.json()) as {
-    products: Array<ProductResponse>;
-  };
+  const { products } = productsData;
   const prices = products.map(
     (product: ProductResponse) => product.data.attributes.price,
   );
