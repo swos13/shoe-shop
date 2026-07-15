@@ -21,7 +21,7 @@ import {
   getStored,
   getOrders,
 } from './api';
-import { getMockProducts } from './mockApi';
+import { getMockFiltersData, getMockProducts } from './mockApi';
 
 /**
  * Custom hook to fetch paginated products using infinite scrolling.
@@ -68,7 +68,7 @@ export const useProducts = (
 export const useFilters = () => {
   return useQuery({
     queryKey: ['filters'],
-    queryFn: getFiltersData,
+    queryFn: getMockFiltersData,
   });
 };
 

@@ -1,6 +1,6 @@
 import { Stack } from '@mui/material';
 
-import { getFiltersData, getMaxPrice } from '@/tools';
+import { getMockFiltersData, getMaxPrice } from '@/tools';
 import { buildParams } from '@/utils';
 import FilterToggle from './FilterToggle';
 import { getMockMaxPrice, getMockProducts } from '@/tools/mockApi';
@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Products = async ({ searchParams }: Props) => {
-  const filters = await getFiltersData();
+  const filters = await getMockFiltersData();
   const params = buildParams(searchParams);
   const initialProducts = await getMockProducts(1, params);
   const maxPrice = await getMockMaxPrice();

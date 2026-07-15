@@ -7,7 +7,7 @@ import { ListProductImages } from '@/components/common';
 type Props = {
   queryKey: string[];
   name: string;
-  control: Control<any>;
+  control: any;
 };
 
 const ControlledImageList: React.FC<Props> = ({ queryKey, name, control }) => {

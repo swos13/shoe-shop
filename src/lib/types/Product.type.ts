@@ -15,7 +15,7 @@ export type Product = {
   name: string;
   description: string;
   price: number;
-  teamName: 'team-1' | 'team-2' | 'team-3';
+  teamName: string;
 };
 
 export type TImage = {

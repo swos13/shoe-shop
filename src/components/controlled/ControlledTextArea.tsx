@@ -7,7 +7,7 @@ import ErrorMessage from '@/components/ui/ErrorMessage';
 
 type Props = {
   name: string;
-  control: Control<any>;
+  control: any;
   label: string;
   placeholder?: string;
   disabled?: boolean;
