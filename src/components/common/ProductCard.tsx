@@ -127,7 +127,7 @@ const ProductCard = ({
             )}
             {product.images?.data ? (
               <Image
-                src={`${process.env.API_URL}/mock-data/mock-images/${product.images.data[0].attributes.url}`}
+                src={`/mock-data/mock-images/${product.images.data[0].attributes.url}`}
                 alt={product.name!}
                 fill
                 style={{ objectFit: 'cover' }}
