@@ -28,12 +28,6 @@ export async function getMockProducts(
   pageParam: number = 1,
   params?: MockFilters,
 ) {
-  const response = await fetch(
-    `${process.env.API_URL}/mock-data/mock-products.json`,
-  );
-
-  if (!response.ok) throw Error('Failed to fetch products');
-
   const { products } = productsData;
 
   let filteredProducts = products.map(
