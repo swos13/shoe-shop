@@ -133,6 +133,7 @@ const ProductCard = ({
                 style={{ objectFit: 'cover' }}
                 priority={imagePriority}
                 sizes="(max-width: 640px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                unoptimized
               />
             ) : (
               <Paper
