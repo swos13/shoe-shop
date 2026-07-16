@@ -72,6 +72,8 @@ const ProductCard = ({
     }
   };
 
+  console.log(product?.images, product?.images?.data?.[0].attributes.url);
+
   return (
     <Box
       data-testid="product-card"
