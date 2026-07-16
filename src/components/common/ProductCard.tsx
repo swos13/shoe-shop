@@ -72,8 +72,6 @@ const ProductCard = ({
     }
   };
 
-  console.log(product?.images, product?.images?.data?.[0].attributes.url);
-
   return (
     <Box
       data-testid="product-card"
@@ -134,7 +132,7 @@ const ProductCard = ({
                 fill
                 style={{ objectFit: 'cover' }}
                 priority={imagePriority}
-                sizes="100%"
+                sizes="(max-width: 640px) 50vw, (max-width: 1280px) 33vw, 25vw"
               />
             ) : (
               <Paper
