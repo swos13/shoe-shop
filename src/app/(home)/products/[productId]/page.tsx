@@ -3,7 +3,8 @@ import Image from 'next/image';
 
 import { ImageSlider } from '@/components/common';
 import { productIdStyles as styles } from '@/styles/product/product.style';
-import { getProduct } from '@/tools';
+// import { getProduct } from '@/tools';
+import { getMockProduct } from '@/tools/mockApi';
 import ActionButtons from './ActionButtons';
 import { textOverflowEllipsis } from '@/styles/commonStyles';
 import { ISingleProductPageProps } from '@/lib/types';
@@ -11,10 +12,11 @@ import BackButton from '@/components/common/BackButton';
 import { formatAmount } from '@/utils';
 
 const SingleProductPage = async (props: ISingleProductPageProps) => {
+  console.log('On the product page');
   if (!props || !props.params || !props.params.productId) return null;
   const { productId } = props.params;
 
-  const product = await getProduct(productId);
+  const product = await getMockProduct(productId);
   if (!product?.data?.attributes) return null;
 
   const {
@@ -29,7 +31,10 @@ const SingleProductPage = async (props: ISingleProductPageProps) => {
 
   const gender = genderData?.data?.attributes?.name;
   const sizes = sizesData?.data || [];
-  const images = imagesData?.data?.map(image => image?.attributes?.url) || [];
+  const images =
+    imagesData?.data?.map(
+      image => `/mock-data/mock-images/${image?.attributes?.url}`,
+    ) || [];
 
   return (
     <Container sx={styles.root}>

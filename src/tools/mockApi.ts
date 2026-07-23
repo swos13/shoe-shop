@@ -4,7 +4,6 @@ import { MockFilters, ProductResponse } from '@/lib/types';
 import { filterProducts } from '@/utils/helperFunctions';
 import filtersData from '~/mock-data/mock-filters.json';
 import productsData from '~/mock-data/mock-products.json';
-
 export const getMockFiltersData = async () => {
   try {
     // await fetch(`${process.env.API_URL}/mock-data/mock-filters.json`);
@@ -71,4 +70,10 @@ export async function getMockMaxPrice() {
     (product: ProductResponse) => product.data.attributes.price,
   );
   return Math.max(...prices);
+}
+
+export async function getMockProduct(id: string) {
+  const { products } = productsData;
+
+  return products.find(product => product.data.id.toString() === id);
 }
