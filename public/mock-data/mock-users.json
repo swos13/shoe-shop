@@ -1,0 +1,77 @@
+{
+    "users": [
+        {
+        "data": {
+            "user": {
+                "id": 1,
+                "username": "johndoe",
+                "password": "password123",
+                "firstName": "John",
+                "lastName": "Doe",
+                "email": "johndoe@example.com",
+                "phoneNumber": "+123456789",
+                "avatar": {
+                    "id": 1,
+                    "name": "menu.png",
+                    "alternativeText": null,
+                    "caption": null,
+                    "width": 17,
+                    "height": 15,
+                    "formats": null,
+                    "hash": "menu_ef1bcdf78c",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 0.18,
+                    "url": "",
+                    "previewUrl": null,
+                    "provider": "cloudinary",
+                    "provider_metadata": {
+                    "public_id": "menu_ef1bcdf78c",
+                    "resource_type": "image"
+                    },
+                    "createdAt": "2024-10-06T17:47:34.650Z",
+                    "updatedAt": "2024-10-06T17:47:34.650Z"
+                }
+            }
+        },
+        "status": "authenticated"
+        },
+        
+        {
+        "data": {
+            "user": {
+                "id": 2,
+                "username": "davidtester",
+                "password": "test12345",
+                "firstName": "David",
+                "lastName": "Tester",
+                "email": "davidtester@example.com",
+                "phoneNumber": "+987654321",
+                "avatar": {
+                    "id": 2,
+                    "name": "menu.png",
+                    "alternativeText": null,
+                    "caption": null,
+                    "width": 17,
+                    "height": 15,
+                    "formats": null,
+                    "hash": "menu_ef1bcdf78c",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 0.18,
+                    "url": "/mock-data/mock-images/david-tester.png",
+                    "previewUrl": null,
+                    "provider": "cloudinary",
+                    "provider_metadata": {
+                    "public_id": "menu_ef1bcdf78c",
+                    "resource_type": "image"
+                    },
+                    "createdAt": "2024-10-06T17:47:34.650Z",
+                    "updatedAt": "2024-10-06T17:47:34.650Z"
+                }
+            }
+        },
+        "status": "authenticated"
+        }
+    ]
+}

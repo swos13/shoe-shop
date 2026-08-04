@@ -3,7 +3,7 @@ import { Stack } from '@mui/material';
 import { getMockFiltersData, getMaxPrice } from '@/tools';
 import { buildParams } from '@/utils';
 import FilterToggle from './FilterToggle';
-import { getMockMaxPrice, getMockProducts } from '@/tools/mockApi';
+import { getMockMaxPrice, getMockProducts } from '@/tools/mock/mockApi';
 
 type Props = {
   searchParams: URLSearchParams;

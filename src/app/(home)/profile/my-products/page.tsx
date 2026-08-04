@@ -7,7 +7,7 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions';
 import { ProductList } from '@/components/common';
 import ProfilePicture from '@/components/common/ProfilePicture';
 import { buttonStyles, textOverflowEllipsis } from '@/styles/commonStyles';
-import { getMyProducts } from '@/tools';
+import { getMyMockProducts } from '@/tools';
 import { capitalizeFirstLetter } from '@/utils/helperFunctions';
 import BaseButton from '@/components/ui/BaseButton';
 
@@ -22,7 +22,7 @@ export default async function MyProducts() {
   const { firstName, lastName, username } = user;
   const fullName =
     capitalizeFirstLetter([firstName, lastName].join(' ')) || username;
-  const initialData = await getMyProducts(user, 1);
+  const initialData = await getMyMockProducts(user, 1);
 
   return (
     <>

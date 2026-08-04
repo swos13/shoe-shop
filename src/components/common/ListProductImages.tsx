@@ -27,7 +27,11 @@ import { getItemUrl } from '@/utils/helperFunctions';
 import { useUploadImages } from '@/hooks';
 
 const ListProductImages = ({ queryKey, error }: IListProductImagesProps) => {
-  const { data: images } = useQuery<IImage[] | TMyImage[]>({ queryKey });
+  const { data: images } = useQuery<IImage[] | TMyImage[]>({
+    queryKey,
+    initialData: [],
+    enabled: false,
+  });
 
   const [idDeleteModal, setIdDeleteModal] = useState<null | number>(null);
   const [skeletonAmount, setSkeletonAmount] = useState<number>(0);
