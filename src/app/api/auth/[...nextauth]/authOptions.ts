@@ -1,10 +1,8 @@
-import { AxiosResponse } from 'axios';
-import { AuthOptions } from 'next-auth';
+import { AuthOptions, User } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { cookies } from 'next/headers';
 
-import { ILogInResponse } from '@/lib/types';
-import axiosInstance from '@/tools/axios';
+import mockUsersData from '~/mock-data/mock-users.json';
 
 export const authOptions: AuthOptions = {
   secret: process.env.NEXTAUTH_SECRET,
@@ -19,12 +17,14 @@ export const authOptions: AuthOptions = {
       },
       authorize: async credentials => {
         try {
-          const { data }: AxiosResponse<ILogInResponse> =
-            await axiosInstance.post('/auth/local', {
-              identifier: credentials?.identifier,
-              password: credentials?.password,
-            });
+          const found = mockUsersData.users.find(
+            u =>
+              u.data.user.email === credentials?.identifier &&
+              u.data.user.password === credentials?.password,
+          );
+          if (!found) return null;
 
+          const user = found.data.user;
           const rememberMe = credentials?.rememberMe === 'true';
           const maxAge = rememberMe ? 30 * 24 * 60 * 60 : 24 * 60 * 60;
           const expires = new Date(Date.now() + maxAge * 1000);
@@ -38,25 +38,16 @@ export const authOptions: AuthOptions = {
             expires: expires,
           });
 
-          const userInfo = await axiosInstance.get(
-            `/users/${data.user?.id}?populate=avatar`,
-            {
-              headers: {
-                'Content-Type': 'application/json',
-                Authorization: `Bearer ${data.jwt}`,
-              },
-            },
-          );
           return {
-            id: String(data.user?.id),
-            username: data.user?.username,
-            email: data.user?.email,
-            accessToken: data.jwt,
-            avatar: userInfo.data?.avatar || null,
-            firstName: userInfo.data?.firstName || null,
-            lastName: userInfo.data?.lastName || null,
-            phoneNumber: userInfo.data?.phoneNumber || null,
-          };
+            id: String(user.id),
+            username: user.username,
+            email: user.email,
+            accessToken: 'mock-token',
+            avatar: user.avatar || null,
+            firstName: user.firstName || null,
+            lastName: user.lastName || null,
+            phoneNumber: user.phoneNumber || undefined,
+          } as unknown as User;
         } catch (error) {
           return null;
         }

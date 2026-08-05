@@ -79,7 +79,7 @@ const ProductForm = ({
   }
   const { data: uploadedImages, isPending: isPendingImages } = useQuery<
     IImage[]
-  >({ queryKey: imagesQueryKey });
+  >({ queryKey: imagesQueryKey, initialData: [], enabled: false });
 
   const {
     handleSubmit,

@@ -6,7 +6,6 @@ import { useRouter } from 'next/navigation';
 import { enqueueSnackbar } from 'notistack';
 
 import { ILogInRequest, ILogInResponse, IReactQueryError } from '@/lib/types';
-import axiosInstance from '@/tools/axios';
 
 /**
  * Custom React hook for handling user sign-in using react-query's `useMutation` hook.
@@ -46,10 +45,7 @@ export const useSignIn = () => {
 
   return useMutation<ILogInResponse, IReactQueryError, ILogInRequest>({
     mutationFn: async (credentials: ILogInRequest) => {
-      return axiosInstance.post(
-        `${process.env.API_URL}/auth/local`,
-        credentials,
-      );
+      return {} as ILogInResponse;
     },
     onSuccess: (_, userData) => {
       signIn('credentials', {
