@@ -23,8 +23,10 @@ import {
 } from './api';
 import {
   getMockFiltersData,
+  getMockProduct,
   getMockProducts,
   getMyMockProducts,
+  getStoredMocks,
 } from './mock/mockApi';
 
 /**
@@ -402,31 +404,25 @@ export const removeProductFromStoresOnDelete = (
  * @param {string} userId - The ID of the current user, or undefined if not authenticated.
  * @returns {booleann} - Returns boolean to let the related component know whether there is any change in the array.
  */
-export const validateStoredItems = async (
+export const validateStoredItems = (
   storeName: 'lastViewed' | 'wishlisted' | 'cart',
   userId?: string,
 ) => {
   const storageKey = userId ? `${storeName}_${userId}` : storeName;
   const productIds = getStoredProductIds(storeName, userId);
 
-  const validatedProducts = await Promise.allSettled(
-    productIds.map(id => getProduct(id)),
-  );
+  const products = productIds.map(id => getMockProduct(id));
 
-  const validProductIds = validatedProducts
-    .filter(response => response.status === 'fulfilled')
-    .map(result => result.value.data.id);
+  const invalidProductIds = products.filter(product => product === undefined);
 
-  const validCartItems = validatedProducts
-    .filter(response => response.status === 'fulfilled')
-    .map(result => ({
-      ...result.value.data.attributes,
-      id: Number(result.value.data.id),
-    }));
+  const validProducts = products.filter(product => product !== undefined);
 
-  const invalidProductIds = validatedProducts.filter(
-    response => response.status === 'rejected',
-  );
+  const validProductIds = validProducts.map(product => product?.data.id);
+
+  const validCartItems = validProducts.map(product => ({
+    ...product?.data.attributes,
+    id: Number(product?.data.id),
+  }));
 
   if (storeName === 'cart') {
     // update the cart with the validated data and keeping the amount for each item
@@ -499,7 +495,7 @@ export const useStored = (
 ) => {
   return useQuery({
     queryKey: [key, ids, pageSize],
-    queryFn: () => getStored(ids, pageSize),
+    queryFn: () => getStoredMocks(ids, pageSize),
     select: data => data.data,
   });
 };

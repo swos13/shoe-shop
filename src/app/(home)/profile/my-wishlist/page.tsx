@@ -15,20 +15,21 @@ export default function MyWishlist() {
 
   useEffect(() => {
     if (products && products?.length > 0) {
-      validateStoredItems('wishlisted', session?.user?.id).then(
-        isProductRemoved => {
-          if (isProductRemoved) {
-            enqueueSnackbar(
-              'Some products have been removed from your wishlist because they are no longer available.',
-              {
-                variant: 'default',
-                autoHideDuration: 5000,
-                preventDuplicate: true,
-              },
-            );
-          }
-        },
+      const isProductRemoved = validateStoredItems(
+        'wishlisted',
+        session?.user?.id,
       );
+
+      if (isProductRemoved) {
+        enqueueSnackbar(
+          'Some products have been removed from your wishlist because they are no longer available.',
+          {
+            variant: 'default',
+            autoHideDuration: 5000,
+            preventDuplicate: true,
+          },
+        );
+      }
     }
   }, [products]);
 

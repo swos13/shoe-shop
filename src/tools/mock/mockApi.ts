@@ -79,7 +79,7 @@ export async function getMockMaxPrice() {
   return Math.max(...prices);
 }
 
-export async function getMockProduct(id: string) {
+export function getMockProduct(id: string) {
   const { products } = productsData;
 
   return products.find(product => product.data.id.toString() === id);
@@ -115,3 +115,25 @@ export async function getMyMockProducts(user: User, page: number = 1) {
     },
   };
 }
+
+export const getStoredMocks = async (ids: string[], pageSize: number) => {
+  if (!ids.length) {
+    return { data: [] };
+  }
+
+  const limitedIds = ids.slice(0, pageSize);
+
+  const { products } = productsData;
+
+  const filteredProducts = products
+    .map((product: ProductResponse) => product.data)
+    .filter((product: Data<ProductAttributes>) =>
+      limitedIds.includes(product.id.toString()),
+    );
+
+  const sortedData = filteredProducts.sort(
+    (a, b) => ids.indexOf(a.id.toString()) - ids.indexOf(b.id.toString()),
+  );
+
+  return { data: sortedData };
+};
