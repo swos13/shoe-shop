@@ -5,6 +5,7 @@ import { NextResponse } from 'next/server';
 import filterOrderIds from './utils/filterOrderIds';
 
 export async function middleware(req: NextRequest) {
+
   const pathname = req.nextUrl.pathname;
   const res = NextResponse.next();
 
@@ -37,6 +38,8 @@ export async function middleware(req: NextRequest) {
       }
     }
   }
+
+  if(!req.cookies.get('mockUsersCount')) res.cookies.set('mockUsersCount', '2');
 
   return res;
 }

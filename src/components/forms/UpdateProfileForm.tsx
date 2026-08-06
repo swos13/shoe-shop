@@ -11,11 +11,8 @@ import { ControlledInput } from '@/components/controlled';
 import { UpdateProfileFormSkeleton } from '@/components/ui/loading-skeletons/UpdateProfileFormSkeleton';
 import { UpdateProfileValidation } from '@/lib/validation';
 import { updateProfileFormStyles as styles } from '@/styles/forms/updateProfileForm.style';
-import { useUpdateProfileMutation } from '@/hooks';
 import BaseButton from '../ui/BaseButton';
-import { setUser } from '@/tools/mock/mockUser';
 import { User } from 'next-auth';
-import { cookies } from 'next/headers';
 import { setUserCookie } from '@/tools/mock/actions';
 
 const defaultValues = {
@@ -62,7 +59,6 @@ export const UpdateProfileForm: React.FC = () => {
 
     setIsUpdating(true);
 
-    setUser(updatedUser);
     setUserCookie(updatedUser);
     update({ user: updatedUser });
     

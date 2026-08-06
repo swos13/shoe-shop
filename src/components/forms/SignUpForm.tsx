@@ -15,6 +15,9 @@ import { signUp } from '@/tools';
 import { stylingConstants } from '@/lib/constants/themeConstants';
 import BaseButton from '../ui/BaseButton';
 import { buttonStyles } from '@/styles/commonStyles';
+import { createUser } from '@/tools/mock/actions';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const defaultValues = {
   firstName: '',
@@ -39,23 +42,43 @@ const SignUpForm: React.FC = () => {
     defaultValues,
   });
 
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [isPending, setIsPending] = useState(false);
+
+  const router = useRouter();
+
   const onSubmit = async (data: z.infer<typeof SignUpFormValidation>) => {
     try {
-      await mutation.mutateAsync({
-        firstName: data.firstName,
-        email: data.email,
-        password: data.password,
-      });
+      // await mutation.mutateAsync({
+      //   firstName: data.firstName,
+      //   email: data.email,
+      //   password: data.password,
+      // });
+      setIsPending(true);
+      const newUser = await createUser(
+        data.firstName,
+        data.email,
+        data.password,
+      );
+
+      if (newUser) setIsSuccess(true);
       reset();
+      enqueueSnackbar('Registration successful, now you can sign in', {
+        variant: 'success',
+        autoHideDuration: 5000,
+      });
+      router.push('/auth/sign-in');
     } catch (error: any) {
       enqueueSnackbar(error.message, {
         variant: 'error',
-        autoHideDuration: 10000,
+        autoHideDuration: 5000,
       });
+    } finally {
+      setIsPending(false);
     }
   };
 
-  if (mutation.isSuccess) {
+  if (isSuccess) {
     return (
       <Alert
         severity="success"
@@ -117,14 +140,14 @@ const SignUpForm: React.FC = () => {
         />
         <BaseButton
           type="submit"
-          disabled={mutation.isPending}
+          disabled={isPending}
           sx={{
             ...buttonStyles.authBtn,
             ...buttonStyles.disabledBtn,
             mt: '66px',
           }}
         >
-          {mutation.isPending ? 'Loading...' : 'Sign Up'}
+          {isPending ? 'Loading...' : 'Sign Up'}
         </BaseButton>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center', gap: '6px' }}>

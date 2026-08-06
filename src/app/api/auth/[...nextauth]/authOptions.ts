@@ -1,4 +1,3 @@
-import { getUser } from '@/tools/mock/mockUser';
 import { AuthOptions, User } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { cookies } from 'next/headers';
@@ -18,17 +17,35 @@ export const authOptions: AuthOptions = {
       },
       authorize: async credentials => {
         try {
-          const found = mockUsersData.users.find(
-            u =>
-              u.data.user.email === credentials?.identifier &&
-              u.data.user.password === credentials?.password,
-          );
-          if (!found) return null;
+          let found = null;
+          let storedUser = null;
 
           const cookieStore = cookies();
-          const storedUser = cookieStore.get(`user_${found.data.user.id}`)?.value;
+          const usersCount = cookieStore.get('mockUsersCount')?.value;
 
-          const user = storedUser ? JSON.parse(storedUser) : found.data.user;
+          if (!usersCount) return null;
+          const usersAmount = JSON.parse(usersCount);
+
+          for (let i = 0; i < usersAmount; i++) {
+            const checkedUser = cookieStore.get(`user_${i + 1}`)?.value;
+
+            if (checkedUser && (JSON.parse(checkedUser) as User).email === credentials?.identifier) {
+              storedUser = checkedUser; 
+              break;
+            }
+          }
+
+          if(!storedUser){
+            const mockUser = mockUsersData.users.find(
+              u =>
+                u.data.user.email === credentials?.identifier &&
+                u.data.user.password === credentials?.password,
+            );
+            if(!mockUser) return null;
+            found = mockUser.data.user;
+          }
+
+          const user = storedUser ? JSON.parse(storedUser) : found;
           const rememberMe = credentials?.rememberMe === 'true';
           const maxAge = rememberMe ? 30 * 24 * 60 * 60 : 24 * 60 * 60;
           const expires = new Date(Date.now() + maxAge * 1000);
