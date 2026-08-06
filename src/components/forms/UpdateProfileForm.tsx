@@ -13,6 +13,8 @@ import { UpdateProfileValidation } from '@/lib/validation';
 import { updateProfileFormStyles as styles } from '@/styles/forms/updateProfileForm.style';
 import { useUpdateProfileMutation } from '@/hooks';
 import BaseButton from '../ui/BaseButton';
+import { setUser } from '@/tools/mock/mockUser';
+import { User } from 'next-auth';
 
 const defaultValues = {
   firstName: '',
@@ -42,12 +44,21 @@ export const UpdateProfileForm: React.FC = () => {
     });
   }, [status]);
 
-  const onSubmit = async (data: z.infer<typeof UpdateProfileValidation>) => {
-    await mutateAsync({
-      ...data,
-      id: session?.user.id,
-      jwt: session?.user.accessToken,
-    });
+  const onSubmit = (data: z.infer<typeof UpdateProfileValidation>) => {
+    // await mutateAsync({
+    //   ...data,
+    //   id: session?.user.id,
+    //   jwt: session?.user.accessToken,
+    // });
+
+    const updatedUser = {
+      ...session?.user,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      phoneNumber: data.phoneNumber,
+    } as User;
+
+    setUser(updatedUser);
   };
 
   if (status === 'loading') return <UpdateProfileFormSkeleton />;
