@@ -25,11 +25,10 @@ export const authOptions: AuthOptions = {
           );
           if (!found) return null;
 
-          const localStorageUser = getUser(found.data.user.id);
-          console.log('User from local storage', localStorageUser);
+          const cookieStore = cookies();
+          const storedUser = cookieStore.get(`user_${found.data.user.id}`)?.value;
 
-          const user = localStorageUser ? localStorageUser : found.data.user;
-          console.log('User i got', user);
+          const user = storedUser ? JSON.parse(storedUser) : found.data.user;
           const rememberMe = credentials?.rememberMe === 'true';
           const maxAge = rememberMe ? 30 * 24 * 60 * 60 : 24 * 60 * 60;
           const expires = new Date(Date.now() + maxAge * 1000);

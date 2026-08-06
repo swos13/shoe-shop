@@ -3,7 +3,7 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Box } from '@mui/material';
 import { useSession } from 'next-auth/react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
@@ -15,6 +15,8 @@ import { useUpdateProfileMutation } from '@/hooks';
 import BaseButton from '../ui/BaseButton';
 import { setUser } from '@/tools/mock/mockUser';
 import { User } from 'next-auth';
+import { cookies } from 'next/headers';
+import { setUserCookie } from '@/tools/mock/actions';
 
 const defaultValues = {
   firstName: '',
@@ -24,9 +26,9 @@ const defaultValues = {
 };
 
 export const UpdateProfileForm: React.FC = () => {
-  const { data: session, status } = useSession();
+  const { data: session, status, update } = useSession();
 
-  const { mutateAsync, isPending } = useUpdateProfileMutation();
+  const [isUpdating, setIsUpdating] = useState(false);
 
   const { handleSubmit, reset, control } = useForm<
     z.infer<typeof UpdateProfileValidation>
@@ -58,7 +60,13 @@ export const UpdateProfileForm: React.FC = () => {
       phoneNumber: data.phoneNumber,
     } as User;
 
+    setIsUpdating(true);
+
     setUser(updatedUser);
+    setUserCookie(updatedUser);
+    update({ user: updatedUser });
+    
+    setIsUpdating(false);
   };
 
   if (status === 'loading') return <UpdateProfileFormSkeleton />;
@@ -102,8 +110,8 @@ export const UpdateProfileForm: React.FC = () => {
         placeholder={'+000123456789'}
         inputStyle={styles.field}
       />
-      <BaseButton type="submit" sx={styles.submitButton} disabled={isPending}>
-        {isPending ? 'Saving...' : 'Save Changes'}
+      <BaseButton type="submit" sx={styles.submitButton} disabled={isUpdating}>
+        {isUpdating ? 'Saving...' : 'Save Changes'}
       </BaseButton>
     </Box>
   );
