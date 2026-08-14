@@ -72,7 +72,7 @@ const ProductForm = ({
     buildParams(searchParams),
     userData?.user,
   );
-
+  console.log(userData, filtersData);
   const imagesQueryKey = ['productUploadedImages'];
   if (mode !== 'create' && product?.id) {
     imagesQueryKey.push(product?.id.toString());

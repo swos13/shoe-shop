@@ -8,7 +8,7 @@ import { enqueueSnackbar } from 'notistack';
 import { IReactQueryError } from '@/lib/types';
 import { IAddProductRequest } from '@/lib/types/requests/product.type';
 import { IAddProductResponse } from '@/lib/types/responses/product.type';
-import { addProduct } from '@/tools';
+import { addMockProduct } from '@/tools/mock/mockApi';
 
 /**
  * Custom hook for creating a product using a mutation.
@@ -28,7 +28,7 @@ export const useCreateProduct = (): UseMutationResult<
 
   return useMutation({
     mutationFn: (data: IAddProductRequest) => {
-      return addProduct(data, session?.user.accessToken);
+      return addMockProduct(data, session?.user.accessToken);
     },
     onSuccess: () => {
       enqueueSnackbar('Product added successfully.', {
