@@ -140,7 +140,7 @@ export const getStoredMocks = async (ids: string[], pageSize: number) => {
   return { data: sortedData };
 };
 
-export function addMockProduct(data: IAddProductRequest, user: User) {
+export async function addMockProduct(data: IAddProductRequest, user: User) {
   console.log(data);
 
   return {} as IAddProductResponse;
