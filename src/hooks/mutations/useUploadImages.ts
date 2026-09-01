@@ -8,7 +8,7 @@ import {
   IUploadImageReq,
   IUploadImageRes,
 } from '@/lib/types';
-import { uploadImages } from '@/tools/api';
+import { uploadMockImages } from '@/tools/mock/mockApi';
 
 /**
  * Custom hook for uploading images using a mutation.
@@ -28,7 +28,7 @@ import { uploadImages } from '@/tools/api';
  */
 export const useUploadImages = () =>
   useMutation<IUploadImageRes, IReactQueryError, IUploadImageReq>({
-    mutationFn: uploadImages,
+    mutationFn: uploadMockImages,
     onError: () => {
       enqueueSnackbar('Image uploading failed', {
         variant: 'error',

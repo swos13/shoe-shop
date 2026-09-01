@@ -4,11 +4,13 @@ import {
   Data,
   IAddProductRequest,
   IAddProductResponse,
+  IImage,
+  IUploadImageRes,
   MockFilters,
   ProductAttributes,
   ProductResponse,
 } from '@/lib/types';
-import { filterProducts } from '@/utils/helperFunctions';
+import { filterProducts, getExtension } from '@/utils/helperFunctions';
 import { User } from 'next-auth';
 import filtersData from '~/mock-data/mock-filters.json';
 import productsData from '~/mock-data/mock-products.json';
@@ -144,4 +146,55 @@ export async function addMockProduct(data: IAddProductRequest, user: User) {
   console.log(data);
 
   return {} as IAddProductResponse;
+}
+
+export async function uploadMockImages(formData: FormData) {
+  // getting this from the form
+  // -path:"./IMG_6186.JPG"
+  // relativePath:"./IMG_6186.JPG"
+  // lastModified:1783024340446
+  // lastModifiedDate:Thu Jul 02 2026 22:32:20 GMT+0200 (czas środkowoeuropejski letni) {}
+  // name:"IMG_6186.JPG"
+  // size:2849743
+  // type:"image/jpeg"
+  // webkitRelativePath:""
+  // "images": { "data": [ { "id": 10, "attributes": { "width": 100, "height": 100, "url": "/mock-data/mock-images/shoe-8.avif", "provider_metadata": { "public_id": "Shoe 8", "resource_type": "image" }, "createdAt": "2024-11-01T10:00:00.000Z", "updatedAt": "2024-11-01T10:00:00.000Z", "publishedAt": "2024-11-01T10:00:00.000Z", "id": 10 } } ] },
+  // 'upload' - return images ready to add to product. But products should hold only ids, and the ids - keys that are also in the focal storage image table. so basically I could add to the focal storage right away and later load from it. But thtat will require to change how products are stored as well, since they have the imgs data
+
+  const images = formData.getAll('files');
+
+  const uploadedImages: IUploadImageRes = images
+    .map((image: FormDataEntryValue) => {
+      if (typeof image === 'string') return null;
+
+      const now = Date.now().toLocaleString('en-US');
+
+      const ext = getExtension(image);
+
+      const uploadedImage: IImage = {
+        originalFile: image,
+        id: 22, //new id - make key last id
+        name: image.name,
+        alternativeText: 'Shoe image',
+        caption: '',
+        width: NaN,
+        height: NaN,
+        formats: {},
+        hash: '',
+        ext: ext,
+        url: '',
+        mime: `image/${ext}`,
+        size: 0,
+        previewUrl: '',
+        provider: '',
+        provider_metadata: {},
+        createdAt: now,
+        updatedAt: now,
+      };
+
+      return uploadedImage;
+    })
+    .filter(image => image !== null);
+
+  return uploadedImages;
 }

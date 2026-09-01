@@ -49,6 +49,7 @@ const ListProductImages = ({ queryKey, error }: IListProductImagesProps) => {
 
     uploadImagesMutation.mutateAsync(formData, {
       onSuccess: (data: IImage[]) => {
+        console.log('success data', data);
         queryClient.setQueryData(queryKey, (prev: IImage[] | null) =>
           prev ? [...prev, ...data] : [...data],
         );
@@ -94,6 +95,7 @@ const ListProductImages = ({ queryKey, error }: IListProductImagesProps) => {
       >
         {Array.isArray(images) &&
           images.map(item => {
+            console.log('item:', item);
             return (
               <Grid key={item.id} item xs={6} lg={12} xl={6}>
                 <Box sx={styles.productImageContainer}>
@@ -111,7 +113,9 @@ const ListProductImages = ({ queryKey, error }: IListProductImagesProps) => {
                       />
                     </IconButton>
                   </Box>
-                  <ImageWithSkeleton src={getItemUrl(item)} />
+                  <ImageWithSkeleton
+                    src={URL.createObjectURL((item as IImage).originalFile!)}
+                  />
                 </Box>
                 <DeleteModal
                   open={Boolean(idDeleteModal)}
@@ -153,7 +157,7 @@ const ListProductImages = ({ queryKey, error }: IListProductImagesProps) => {
               mb: '3px',
             }}
           >
-            <input {...getInputProps()} data-testid="file-input" />
+            <input name="image" {...getInputProps()} data-testid="file-input" />
             <Gallery
               size="38"
               color={stylingConstants.palette.grey[500]}

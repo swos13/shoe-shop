@@ -3,7 +3,7 @@ import Stripe from 'stripe';
 
 //TODO: Add check if production and if it is then throw error
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
-  apiVersion: '2024-09-30.acacia', // Use your targeted API version
+  apiVersion: '2025-02-24.acacia', // Use your targeted API version
 });
 
 export async function POST(req: NextRequest) {
