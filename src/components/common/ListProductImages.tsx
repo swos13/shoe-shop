@@ -114,7 +114,11 @@ const ListProductImages = ({ queryKey, error }: IListProductImagesProps) => {
                     </IconButton>
                   </Box>
                   <ImageWithSkeleton
-                    src={URL.createObjectURL((item as IImage).originalFile!)}
+                    src={
+                      'attributes' in item
+                        ? item.attributes.url
+                        : URL.createObjectURL((item as IImage).originalFile!)
+                    }
                   />
                 </Box>
                 <DeleteModal

@@ -6,6 +6,7 @@ import AppProvider from '@/lib/AppProvider';
 import theme from '@/theme';
 import '../styles/globals.css';
 import '../styles/animation.css';
+import { StoreInitializer } from '@/components/StoreInitializer';
 
 export const metadata: Metadata = {
   title: 'Shoe shop',
@@ -23,7 +24,9 @@ export default function RootLayout({
       <body>
         <AppProvider>
           <AppRouterCacheProvider>
-            <ThemeProvider theme={theme}>{children}</ThemeProvider>
+            <ThemeProvider theme={theme}>
+              <StoreInitializer>{children}</StoreInitializer>
+            </ThemeProvider>
           </AppRouterCacheProvider>
         </AppProvider>
       </body>

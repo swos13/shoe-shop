@@ -2,7 +2,7 @@
   "products": [
     {
       "data": {
-        "id": 1788,
+        "id": 1,
         "attributes": {
           "id": 1,
           "name": "Handball Spezial",
@@ -145,7 +145,7 @@
     },
     {
       "data": {
-        "id": 1789,
+        "id": 2,
         "attributes": {
           "id": 2,
           "name": "Nike Street Runner Black",
@@ -239,7 +239,7 @@
     },
     {
       "data": {
-        "id": 1790,
+        "id": 3,
         "attributes": {
           "id": 1,
           "name": "Nike Trail Pulse Green",
@@ -285,7 +285,7 @@
     },
     {
       "data": {
-        "id": 1791,
+        "id": 4,
         "attributes": {
           "id": 2,
           "name": "Nike Court Flex White",
@@ -331,7 +331,7 @@
     },
     {
       "data": {
-        "id": 1792,
+        "id": 5,
         "attributes": {
           "id": 1,
           "name": "Nike Motion Blend",
@@ -358,7 +358,7 @@
     },
     {
       "data": {
-        "id": 1793,
+        "id": 6,
         "attributes": {
           "id": 2,
           "name": "Nike Air Daily White",
@@ -384,7 +384,7 @@
     },
     {
       "data": {
-        "id": 1794,
+        "id": 7,
         "attributes": {
           "id": 1,
           "name": "Nike Velocity Orange",
@@ -411,7 +411,7 @@
     },
     {
       "data": {
-        "id": 1795,
+        "id": 8,
         "attributes": {
           "id": 2,
           "name": "Puma Heritage Brown",
@@ -438,7 +438,7 @@
     },
     {
       "data": {
-        "id": 1796,
+        "id": 9,
         "attributes": {
           "id": 1,
           "name": "Nike Sprint Red",

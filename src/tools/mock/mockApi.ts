@@ -14,6 +14,7 @@ import { filterProducts, getExtension } from '@/utils/helperFunctions';
 import { User } from 'next-auth';
 import filtersData from '~/mock-data/mock-filters.json';
 import productsData from '~/mock-data/mock-products.json';
+import { getAllProducts } from './localForage';
 
 export const getMockFiltersData = async () => {
   try {
@@ -38,11 +39,13 @@ export async function getMockProducts(
   pageParam: number = 1,
   params?: MockFilters,
 ) {
-  const { products } = productsData;
+  const products = await getAllProducts();
+  let filteredProducts: Array<Data<ProductAttributes>>;
 
-  let filteredProducts = products.map(
-    (product: ProductResponse) => product.data,
-  );
+  console.log(products);
+  if (!products) filteredProducts = [];
+  else
+    filteredProducts = products.map((product: ProductResponse) => product.data);
 
   if (
     params &&
@@ -142,25 +145,26 @@ export const getStoredMocks = async (ids: string[], pageSize: number) => {
   return { data: sortedData };
 };
 
+//TODO: created product add to localforage products store. In the forage keep the number of existing products and create script to add the mock products if the localforage is empty -> then get products in the app from there
 export async function addMockProduct(data: IAddProductRequest, user: User) {
   console.log(data);
+
+  const newProduct = {
+    data: {
+      id: 30,
+      attributes: {
+        ...data,
+      },
+    },
+  };
+
+  console.log(newProduct);
 
   return {} as IAddProductResponse;
 }
 
+//TODO: Save uploaded images to localforage in store for images
 export async function uploadMockImages(formData: FormData) {
-  // getting this from the form
-  // -path:"./IMG_6186.JPG"
-  // relativePath:"./IMG_6186.JPG"
-  // lastModified:1783024340446
-  // lastModifiedDate:Thu Jul 02 2026 22:32:20 GMT+0200 (czas środkowoeuropejski letni) {}
-  // name:"IMG_6186.JPG"
-  // size:2849743
-  // type:"image/jpeg"
-  // webkitRelativePath:""
-  // "images": { "data": [ { "id": 10, "attributes": { "width": 100, "height": 100, "url": "/mock-data/mock-images/shoe-8.avif", "provider_metadata": { "public_id": "Shoe 8", "resource_type": "image" }, "createdAt": "2024-11-01T10:00:00.000Z", "updatedAt": "2024-11-01T10:00:00.000Z", "publishedAt": "2024-11-01T10:00:00.000Z", "id": 10 } } ] },
-  // 'upload' - return images ready to add to product. But products should hold only ids, and the ids - keys that are also in the focal storage image table. so basically I could add to the focal storage right away and later load from it. But thtat will require to change how products are stored as well, since they have the imgs data
-
   const images = formData.getAll('files');
 
   const uploadedImages: IUploadImageRes = images
